@@ -1,0 +1,117 @@
+<div class="login-page">
+
+  <section class="login-panel">
+
+    <div class="login-content">
+
+      <img
+        src="assets/img/ford.png"
+        alt="Ford"
+        class="ford-logo"
+      >
+
+      <div class="login-header">
+        <span class="eyebrow">FORD CONNECT</span>
+
+        <h1>Bem-vindo.</h1>
+
+        <p>
+          Acesse a plataforma para acompanhar seus veículos
+          e dados de conectividade.
+        </p>
+      </div>
+
+      <form (ngSubmit)="entrar()">
+
+        <div class="mb-3">
+          <label for="nome" class="form-label">Usuário</label>
+
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            class="form-control"
+            placeholder="Digite seu usuário"
+            [(ngModel)]="nome"
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="senha" class="form-label">Senha</label>
+
+          <input
+            id="senha"
+            name="senha"
+            type="password"
+            class="form-control"
+            placeholder="Digite sua senha"
+            [(ngModel)]="senha"
+          >
+        </div>
+
+        <div
+          *ngIf="mensagemErro"
+          class="alert alert-danger py-2"
+        >
+          {{ mensagemErro }}
+        </div>
+
+        <button type="submit" class="btn-login">
+          <span>Entrar</span>
+          <span>→</span>
+        </button>
+
+      </form>
+
+      <div class="connected-text">
+        <span></span>
+        DIRIGINDO UM FUTURO MAIS CONECTADO
+        <span></span>
+      </div>
+
+      <p class="footer-text">Ford Motor Company</p>
+
+    </div>
+
+  </section>
+
+
+  <section class="vehicle-panel">
+
+    <div class="vehicle-copy">
+
+      <span class="eyebrow">
+        DESEMPENHO • CONECTIVIDADE • CONTROLE
+      </span>
+
+      <h2>
+        POTÊNCIA QUE TE<br>
+        LEVA <strong>MAIS LONGE.</strong>
+      </h2>
+
+      <p>
+        Tecnologia Ford para conectar você a cada detalhe
+        da sua jornada.
+      </p>
+
+    </div>
+
+    <div class="mustang-background">
+      MUSTANG
+    </div>
+
+    <img
+      src="assets/img/mustang-sem-fundo.png"
+      alt="Ford Mustang"
+      class="mustang-image"
+    >
+
+    <div class="vehicle-footer">
+      <span></span>
+      LIBERDADE EM<br>
+      CADA TRAJETO
+    </div>
+
+  </section>
+
+</div>

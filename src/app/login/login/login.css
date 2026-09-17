@@ -1,0 +1,306 @@
+:host {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  overflow: hidden;
+  background: #020b16;
+}
+
+/* LOGIN */
+
+.login-panel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 42px;
+  position: relative;
+  z-index: 5;
+
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0, 93, 190, 0.15), transparent 35%),
+    linear-gradient(145deg, #04182a, #020b15 70%);
+
+  border-right: 1px solid rgba(58, 145, 235, 0.18);
+}
+
+.login-content {
+  width: 100%;
+  max-width: 430px;
+}
+
+.ford-logo {
+  width: 130px;
+  margin-bottom: 50px;
+}
+
+.eyebrow {
+  color: #35a1ff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.login-header h1 {
+  margin: 8px 0 13px;
+  color: white;
+  font-size: 3rem;
+  font-weight: 750;
+  letter-spacing: -2px;
+}
+
+.login-header p {
+  color: #9bacc0;
+  line-height: 1.6;
+  margin-bottom: 34px;
+}
+
+.form-label {
+  color: #e8eef6;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.form-control {
+  height: 54px;
+  padding: 0 16px;
+
+  color: white;
+  background: rgba(7, 30, 52, 0.8);
+
+  border: 1px solid #294e72;
+  border-radius: 9px;
+
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: #73879e;
+}
+
+.form-control:focus {
+  color: white;
+  background: #082039;
+  border-color: #1689ff;
+  box-shadow: 0 0 0 3px rgba(22, 137, 255, 0.12);
+}
+
+.btn-login {
+  width: 100%;
+  height: 55px;
+  margin-top: 8px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: linear-gradient(90deg, #0069df, #1688ff);
+  color: white;
+
+  font-weight: 700;
+  font-size: 1rem;
+
+  transition: 0.25s;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 105, 223, 0.28);
+}
+
+.connected-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 36px;
+
+  color: #45a7ff;
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.connected-text span {
+  flex: 1;
+  height: 1px;
+  background: rgba(69, 167, 255, 0.35);
+}
+
+.footer-text {
+  margin-top: 45px;
+  margin-bottom: 0;
+
+  color: #657b91;
+  font-size: 0.72rem;
+}
+
+
+/* MUSTANG */
+
+.vehicle-panel {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 55% 58%,
+      #0a3a74 0%,
+      #05264e 30%,
+      #03172f 57%,
+      #010916 100%
+    );
+}
+
+.vehicle-panel::before {
+  content: "";
+  position: absolute;
+
+  width: 65%;
+  height: 80%;
+
+  top: 8%;
+  right: -10%;
+
+  border-left: 1px solid rgba(37, 144, 255, 0.22);
+  border-top: 1px solid rgba(37, 144, 255, 0.13);
+
+  transform: skewY(-8deg);
+}
+
+.vehicle-copy {
+  position: absolute;
+  top: 10%;
+  left: 9%;
+  z-index: 3;
+
+  max-width: 650px;
+}
+
+.vehicle-copy h2 {
+  margin: 13px 0;
+
+  color: white;
+  font-size: clamp(2.3rem, 3.4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+
+.vehicle-copy h2 strong {
+  color: #1688ff;
+}
+
+.vehicle-copy p {
+  color: #91a8c1;
+  max-width: 430px;
+  line-height: 1.6;
+}
+
+.mustang-background {
+  position: absolute;
+
+  top: 40%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: rgba(59, 133, 222, 0.11);
+
+  font-size: clamp(6rem, 11vw, 12rem);
+  font-weight: 900;
+  letter-spacing: 7px;
+
+  white-space: nowrap;
+}
+
+.mustang-image {
+  position: absolute;
+  z-index: 2;
+
+  width: 88%;
+  max-width: 1000px;
+
+  right: -1%;
+  bottom: 7%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 35px 28px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 35px rgba(0, 102, 255, 0.12));
+
+  animation: mustangFloat 4s ease-in-out infinite;
+}
+
+@keyframes mustangFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.vehicle-footer {
+  position: absolute;
+  z-index: 3;
+
+  right: 8%;
+  bottom: 5%;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  color: #8ba6c2;
+
+  font-size: 0.67rem;
+  letter-spacing: 3px;
+}
+
+.vehicle-footer span {
+  display: block;
+  width: 90px;
+  height: 1px;
+
+  background: #3379bd;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 991px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-panel {
+    display: none;
+  }
+
+  .login-panel {
+    padding: 30px 22px;
+  }
+
+  .login-header h1 {
+    font-size: 2.5rem;
+  }
+}
