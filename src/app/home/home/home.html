@@ -2,21 +2,65 @@
 
   <nav class="navbar bg-white shadow-sm px-4 py-3">
     <div class="container-fluid">
-      <img
-        src="assets/img/ford.png"
-        alt="Ford"
-        style="width: 110px;"
-      >
 
-      <button
-        class="btn btn-outline-secondary"
-        type="button"
-        (click)="logout()"
-      >
-        Sair
-      </button>
+      <div class="d-flex align-items-center gap-3">
+        <button
+          class="menu-button"
+          type="button"
+          (click)="alternarMenu()"
+          aria-label="Abrir menu"
+        >
+          ☰
+        </button>
+
+        <img
+          src="assets/img/ford.png"
+          alt="Ford"
+          style="width: 110px;"
+        >
+      </div>
+
     </div>
   </nav>
+
+  <!-- MENU LATERAL -->
+  <aside class="side-menu" [class.open]="menuAberto">
+
+    <div class="menu-header">
+      <img src="assets/img/ford.png" alt="Ford">
+
+      <button
+        type="button"
+        class="close-menu"
+        (click)="alternarMenu()"
+      >
+        ×
+      </button>
+    </div>
+
+    <nav class="menu-links">
+
+      <a routerLink="/home" (click)="alternarMenu()">
+        Início
+      </a>
+
+      <a routerLink="/dashboard" (click)="alternarMenu()">
+        Dashboard
+      </a>
+
+      <button type="button" (click)="logout()">
+        Sair
+      </button>
+
+    </nav>
+
+  </aside>
+
+  <div
+    class="menu-overlay"
+    *ngIf="menuAberto"
+    (click)="alternarMenu()"
+  ></div>
 
   <main class="container py-5">
 
@@ -37,13 +81,13 @@
         </p>
 
         <button
-            class="'btn btn-primary btn-lg px-4"
-            type=""button
-            (click)="acessarDashboard()"
-          >
-            Acessar Dashboard
-          </button>
-        </div>
+          class="btn btn-primary btn-lg px-4"
+          type="button"
+          (click)="acessarDashboard()"
+        >
+          Acessar Dashboard
+        </button>
+      </div>
 
       <div class="col-lg-6 text-center mt-5 mt-lg-0">
         <img

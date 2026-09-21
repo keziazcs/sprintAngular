@@ -10,10 +10,16 @@ import { Auth } from '../../services/auth';
 })
 export class Home {
 
+  menuAberto: boolean = false;
+
   constructor(
     private router: Router,
     private authService: Auth
   ) { }
+
+  alternarMenu(): void {
+    this.menuAberto = !this.menuAberto;
+  }
 
   acessarDashboard(): void {
     this.router.navigate(['/dashboard']);

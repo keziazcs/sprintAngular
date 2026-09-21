@@ -243,6 +243,134 @@ main .row {
   }
 
   .col-lg-6.text-center::after {
-    font-size: 4rem;
-  }
+  font-size: 4rem;
+}
+
+} /* FECHA O @media */
+
+/* ===== MENU HAMBÚRGUER ===== */
+
+.menu-button {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #003478;
+
+  font-size: 1.7rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: #eef5fb;
+}
+
+.side-menu {
+  position: fixed;
+
+  top: 0;
+  left: -290px;
+
+  width: 280px;
+  height: 100vh;
+
+  z-index: 1001;
+
+  padding: 25px;
+
+  background: #ffffff;
+
+  box-shadow: 10px 0 30px rgba(0, 35, 75, 0.15);
+
+  transition: left 0.3s ease;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #e7edf4;
+}
+
+.menu-header img {
+  width: 95px;
+  max-width: 95px;
+  height: auto;
+}
+
+.close-menu {
+  border: none;
+  background: transparent;
+
+  color: #003478;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-links a,
+.menu-links button {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #183b5b;
+
+  text-align: left;
+  text-decoration: none;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.menu-links a:hover,
+.menu-links button:hover {
+  color: #0068b5;
+  background: #eef5fb;
+}
+
+.menu-links button {
+  margin-top: 15px;
+  color: #b42318;
+  border-top: 1px solid #edf1f5;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  background: rgba(0, 25, 50, 0.35);
 }
