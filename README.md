@@ -1,59 +1,43 @@
-# SprintAngular
+# Dashboard Ford · Sprint Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.37.
+Aplicação em Angular com **login**, **página inicial** e **dashboard de veículos** que consome uma API REST local. Desafio da sprint de Angular do **Ford Enter**.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+- Login com usuário e senha validados pela API
+- Rotas protegidas: `/home` e `/dashboard` só abrem com o usuário logado (guard `authGuard`)
+- Dashboard com dados dos veículos vindos da API
+- Módulos carregados sob demanda (*lazy loading*) para login, home e dashboard
 
-```bash
-ng serve
-```
+## Tecnologias
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 20 e TypeScript
+- RxJS e `HttpClient`
+- Bootstrap
 
-## Code scaffolding
+## Como rodar
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+O front-end espera uma API rodando em `http://localhost:3001` (rotas `/login` e de veículos), fornecida junto com o desafio.
 
 ```bash
-ng generate --help
+npm install
+npm start
 ```
 
-## Building
+Depois abra `http://localhost:4200/`.
 
-To build the project run:
+## Estrutura
 
-```bash
-ng build
+```
+src/app/
+├── login/       → tela e módulo de login
+├── home/        → página inicial
+├── dashboard/   → painel de veículos
+├── guards/      → proteção das rotas
+├── services/    → autenticação e dados de veículos
+└── models/      → usuário, veículo e dados do veículo
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Feito por [Kézia Carneiro](https://github.com/keziazcs).
